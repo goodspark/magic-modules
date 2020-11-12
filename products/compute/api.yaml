@@ -9996,6 +9996,10 @@ objects:
                     name: 'matchRules'
                     description: |
                       The rules for determining a match.
+                    exactly_one_of:
+                      - match_rules.0.full_path_match
+                      - match_rules.0.prefix_match
+                      - match_rules.0.regex_match
                     item_type: !ruby/object:Api::Type::NestedObject
                       properties:
                         - !ruby/object:Api::Type::String
